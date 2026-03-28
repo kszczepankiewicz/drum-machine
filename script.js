@@ -37,8 +37,6 @@ const display = $('display');
 const displayAudioName = id => display.textContent = fileNames[id];
 
 // Press to play
-const drumMachine = $('drum-machine');
-
 document.addEventListener('keydown', (e) => {
     const index = pads.indexOf(e.key.toUpperCase());
     if (index > -1) playSound(index);
