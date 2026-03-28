@@ -12,6 +12,18 @@ container.innerHTML = text;
 
 const buttons = document.querySelectorAll('button');
 const audios = document.querySelectorAll('audio');
+
+// Click to play
 buttons.forEach((b, i) => b.addEventListener('click', (e) => audios[i].play()));
+
+// Press to play
+const drumMachine = $('drum-machine');
+
+document.addEventListener('keydown', (e) => {
+    const index = pads.indexOf(e.key.toUpperCase());
+    if (index > -1) audios[index].play();
+});
+
+
 
 
