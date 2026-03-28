@@ -21,15 +21,23 @@ body {
 #container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 9px;
+    /* gap: 9px; */
     margin-top: 9px;
-    margin: 0 auto;
+    margin: 0 auto 1rem;
 }
 
 .drum-pad {
-    height: 60px;
+    height: 55px;
     background: rgb(138, 138, 138);
     color: #fff;
     border-radius: 5px;
     border: none;
+    margin: 5px;
+}
+
+#display {
+    display: block;
+    height: 3rem;
+    background: rgb(69, 69, 69);
+    color: #fff;
 }
