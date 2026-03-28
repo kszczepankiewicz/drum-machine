@@ -9,3 +9,9 @@ const fileNames = ['Heater-1', 'Heater-2', 'Heater-3', 'Heater-4_1', 'Heater-6',
 const link = 'https://cdn.freecodecamp.org/curriculum/drum/';
 pads.forEach((p, i) => text += `<button id="${p}" class="drum-pad">${p}<audio id="${p}" class="clip" src="${link + fileNames[i] + '.mp3'}"></audio></button>`);
 container.innerHTML = text;
+
+const buttons = document.querySelectorAll('button');
+const audios = document.querySelectorAll('audio');
+buttons.forEach((b, i) => b.addEventListener('click', (e) => audios[i].play()));
+
+
