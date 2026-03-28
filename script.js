@@ -13,15 +13,25 @@ container.innerHTML = text;
 const buttons = document.querySelectorAll('button');
 const audios = document.querySelectorAll('audio');
 
+// display audio name
+const display = $('display');
+const displayAudioName = id => display.textContent = fileNames[id];
+
 // Click to play
-buttons.forEach((b, i) => b.addEventListener('click', (e) => audios[i].play()));
+buttons.forEach((b, i) => b.addEventListener('click', (e) => {
+    audios[i].play();
+    displayAudioName(i);
+}));
 
 // Press to play
 const drumMachine = $('drum-machine');
 
 document.addEventListener('keydown', (e) => {
     const index = pads.indexOf(e.key.toUpperCase());
-    if (index > -1) audios[index].play();
+    if (index > -1) {
+        audios[index].play();
+        displayAudioName(index);
+    }
 });
 
 
