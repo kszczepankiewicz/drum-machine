@@ -1,6 +1,5 @@
 const $ = id => document.getElementById(id);
 
-const padBank = $('pad-bank');
 const container = $('container')
 
 let text = container.innerHTML;
