@@ -3,36 +3,38 @@
 ::after {
     margin: 0;
     padding: 0;
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
 }
 
 body {
     background: rgb(0, 0, 46);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #drum-machine {
     background-color: rgb(67, 67, 112);
     padding: 1rem;
-    max-width: 200px;
-    margin: 0 auto;
+    width: 300px;
     border-radius: 5px;
 }
 
 #container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* gap: 9px; */
-    margin-top: 9px;
-    margin: 0 auto 1rem;
+    gap: 9px;
+    margin-bottom: 1rem;
 }
 
 .drum-pad {
-    height: 55px;
+    height: 75px;
     background: rgb(138, 138, 138);
+    font-size: 2rem;
     color: #fff;
     border-radius: 5px;
     border: none;
-    margin: 5px;
 }
 
 #display {
