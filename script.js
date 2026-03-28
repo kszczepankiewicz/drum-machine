@@ -7,6 +7,11 @@ const pads = ['Q', 'W', 'E', 'A', 'S', 'D', 'Z', 'X', 'C'];
 const fileNames = ['Heater-1', 'Heater-2', 'Heater-3', 'Heater-4_1', 'Heater-6', 'Dsc_Oh', 'Kick_n_Hat', 'RP4_KICK_1', 'Cev_H2']
 const link = 'https://cdn.freecodecamp.org/curriculum/drum/';
 
+const playSound = index => {
+    audios[index].play();
+    displayAudioName(index);
+}
+
 pads.forEach((pad, i) => {
     const button = document.createElement('button');
     button.id = pad;
@@ -22,10 +27,7 @@ pads.forEach((pad, i) => {
     container.appendChild(button);
 
     // Click to play
-    button.addEventListener('click', (e) => {
-        audios[i].play();
-        displayAudioName(i);
-    })
+    button.addEventListener('click', (e) => playSound(i))
 });
 
 const buttons = document.querySelectorAll('button');
@@ -35,23 +37,10 @@ const audios = document.querySelectorAll('audio');
 const display = $('display');
 const displayAudioName = id => display.textContent = fileNames[id];
 
-// Click to play
-// buttons.forEach((b, i) => b.addEventListener('click', (e) => {
-//   audios[i].play();
-//   displayAudioName(i);
-// }));
-
 // Press to play
 const drumMachine = $('drum-machine');
 
 document.addEventListener('keydown', (e) => {
     const index = pads.indexOf(e.key.toUpperCase());
-    if (index > -1) {
-        audios[index].play();
-        displayAudioName(index);
-    }
+    if (index > -1) playSound(index);
 });
-
-
-
-
