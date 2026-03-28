@@ -21,6 +21,12 @@ pads.forEach((pad, i) => {
 
     button.appendChild(audio);
     container.appendChild(button);
+
+    // Click to play
+    button.addEventListener('click', (e) => {
+        audios[i].play();
+        displayAudioName(i);
+    })
 });
 
 const buttons = document.querySelectorAll('button');
@@ -31,10 +37,10 @@ const display = $('display');
 const displayAudioName = id => display.textContent = fileNames[id];
 
 // Click to play
-buttons.forEach((b, i) => b.addEventListener('click', (e) => {
-    audios[i].play();
-    displayAudioName(i);
-}));
+// buttons.forEach((b, i) => b.addEventListener('click', (e) => {
+//   audios[i].play();
+//   displayAudioName(i);
+// }));
 
 // Press to play
 const drumMachine = $('drum-machine');
