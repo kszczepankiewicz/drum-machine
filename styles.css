@@ -36,8 +36,11 @@ body {
 }
 
 #display {
-    display: block;
+    display: flex;
     height: 3rem;
     background: rgb(69, 69, 69);
     color: #fff;
+    justify-content: center;
+    align-items: center;
+    font-family: system-ui;
 }
