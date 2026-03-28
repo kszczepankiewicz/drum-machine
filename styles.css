@@ -1,0 +1,24 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 9px;
+    margin-top: 9px;
+}
+
+#drum-machine {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.drum-pad {
+    width: 90px;
+    height: 90px;
+}
