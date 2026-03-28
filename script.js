@@ -8,6 +8,7 @@ const fileNames = ['Heater-1', 'Heater-2', 'Heater-3', 'Heater-4_1', 'Heater-6',
 const link = 'https://cdn.freecodecamp.org/curriculum/drum/';
 
 const playSound = index => {
+    audios[index].currentTime = 0;
     audios[index].play();
     displayAudioName(index);
 }
