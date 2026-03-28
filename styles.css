@@ -3,7 +3,19 @@
 ::after {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
+}
+
+body {
+    background: rgb(0, 0, 46);
+}
+
+#drum-machine {
+    background-color: rgb(67, 67, 112);
+    padding: 1rem;
+    max-width: 200px;
+    margin: 0 auto;
+    border-radius: 5px;
 }
 
 #container {
@@ -11,14 +23,13 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 9px;
     margin-top: 9px;
-}
-
-#drum-machine {
-    max-width: 300px;
     margin: 0 auto;
 }
 
 .drum-pad {
-    width: 90px;
-    height: 90px;
+    height: 60px;
+    background: rgb(138, 138, 138);
+    color: #fff;
+    border-radius: 5px;
+    border: none;
 }
