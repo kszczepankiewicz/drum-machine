@@ -1,6 +1,6 @@
 const $ = id => document.getElementById(id);
 
-const container = $('container')
+const padBank = $('pad-bank');
 
 const pads = ['Q', 'W', 'E', 'A', 'S', 'D', 'Z', 'X', 'C'];
 const fileNames = ['Heater-1', 'Heater-2', 'Heater-3', 'Heater-4_1', 'Heater-6', 'Dsc_Oh', 'Kick_n_Hat', 'RP4_KICK_1', 'Cev_H2']
@@ -24,7 +24,7 @@ pads.forEach((pad, i) => {
     audio.src = link + fileNames[i] + '.mp3';
 
     button.appendChild(audio);
-    container.appendChild(button);
+    padBank.appendChild(button);
 
     // Click to play
     button.addEventListener('click', (e) => playSound(i))
